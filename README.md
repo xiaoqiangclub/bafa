@@ -1,6 +1,6 @@
 # XiaoqiangWol
 
-> 通过`小爱同学`全球各地语音控制电脑的开关机
+> 一个可以让`小爱同学`在全球各地通过语音控制电脑开关机的程序
 
 ![xiaoqiangwol](xiaoqiangwol.jpg)
 ## 使用方法
