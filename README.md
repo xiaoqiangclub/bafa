@@ -2,6 +2,7 @@
 
 > 通过`小爱同学`全球各地语音控制电脑的开关机
 
+![xiaoqiangwol](xiaoqiangwol.jpg)
 ## 使用方法
 
 - 要实现这个功能需要在电脑端服务器上进行很多的准备工作，具体的操作流程请 [参考文章](https://blog.csdn.net/xiaoqiangclub/article/details/132845999)，超级详细
