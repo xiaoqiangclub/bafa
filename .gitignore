@@ -129,3 +129,21 @@ dmypy.json
 .pyre/
 
 /.vscode
+/.idea/.gitignore
+/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+/.idea/sonarlint/issuestore/a/3/a3369b85f2e190fd575d9636871f39c4f1253ca4
+/.idea/sonarlint/securityhotspotstore/a/3/a3369b85f2e190fd575d9636871f39c4f1253ca4
+/.idea/bafa.iml
+/.idea/sonarlint/issuestore/c/0/c0fffa6dab38719637f643131f704750033ea1a6
+/.idea/sonarlint/securityhotspotstore/c/0/c0fffa6dab38719637f643131f704750033ea1a6
+/.idea/sonarlint/issuestore/e/8/e8220615e40df2f79ca1080db2a4daf4fc1ad8f2
+/.idea/sonarlint/securityhotspotstore/e/8/e8220615e40df2f79ca1080db2a4daf4fc1ad8f2
+/.idea/sonarlint/issuestore/index.pb
+/.idea/sonarlint/securityhotspotstore/index.pb
+/.idea/misc.xml
+/.idea/modules.xml
+/Pipfile.lock
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
