@@ -87,7 +87,7 @@ def run():
     BaFa(
         client_id=Config.CLIENT_ID,
         topic=Config.TOPIC,
-        ssh=Config.IP,
+        ssh=Config.SSH,
         mac=Config.MAC
     ).connect_mqtt()
 
