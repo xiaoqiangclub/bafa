@@ -12,18 +12,19 @@ from config import Config
 
 
 class BaFa:
-    def __init__(self, client_id: str, topic: str, mac: str):
+    def __init__(self, client_id: str, topic: str, ssh: str, mac: str):
         """
         通过巴法开放平台实现小爱语音控制电脑的开关机
         :param client_id: 巴法开放平台的秘钥：https://cloud.bemfa.com/tcp/index.html
         :param topic: 巴法开放平台创建的主题：https://cloud.bemfa.com/docs/#/?id=_111-%e6%8e%a5%e5%85%a5%e4%bb%8b%e7%bb%8d
+        :param ssh: 要唤醒电脑的 用户名@IP地址
         :param mac: 要唤醒电脑的mac地址
         """
         self._HOST = "bemfa.com"
         self._PORT = 9501
         self.client_id = client_id
         self.topic = topic
-        # 要唤醒电脑的mac地址
+        self.ssh = ssh
         self.mac = mac
 
     def on_connect(self, client, userdata, flags, rc):
@@ -52,10 +53,12 @@ class BaFa:
             self.wake_on_lan()
         elif "off" == data:
             print("关闭电脑")
-            # 休眠
-            # print(os.system('ssh -n Ethan@192.168.2.23 "shutdown -h" > /dev/null 2>&1 &'))
             # 关机
-            os.system('ssh -n xiaoqiang@192.168.1.88 "shutdown -s -t 000" > /dev/null 2>&1 &')
+            os.system(f'ssh -n {self.ssh} "shutdown -s -t 000" > /dev/null 2>&1 &')
+        elif "pause" == data:
+            print("休眠")
+            # 休眠
+            os.system(f'ssh -n {self.ssh} "shutdown -h" > /dev/null 2>&1 &')
 
     # 订阅成功
     def on_subscribe(self, client, userdata, mid, granted_qos):
@@ -83,6 +86,7 @@ def run():
     BaFa(
         client_id=Config.CLIENT_ID,
         topic=Config.TOPIC,
+        ssh=Config.IP,
         mac=Config.MAC
     ).connect_mqtt()
 
