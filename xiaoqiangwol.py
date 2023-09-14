@@ -72,6 +72,7 @@ class BaFa:
     def connect_mqtt(self):
         """实例化client类并连接MQTT服务器"""
         client = mqtt.Client(self.client_id)
+        # 这里的username和password是可选的，可以随意填写
         client.username_pw_set("userName", "passwd")
         client.on_connect = self.on_connect
         client.on_message = self.on_message
